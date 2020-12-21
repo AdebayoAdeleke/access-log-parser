@@ -1,0 +1,7 @@
+SQL Test
+--------------
+
+1)  SELECT ip_address, num_of_request FROM (SELECT ip_address, COUNT(*) AS num_of_request FROM logdb.all_log_data WHERE request_date>='2017-01-01.13:00:00' AND request_date<='2017-01-01.14:00:00' GROUP BY ip_address) AS t WHERE t.num_of_request>=100;
+
+
+2) SELECT * from logdb.all_log_data WHERE ip_address='192.168.122.135'
